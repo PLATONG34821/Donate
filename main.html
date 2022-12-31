@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <style>
+        .flex {
+            /*Flexbox for containers*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 17.5vh;
+            margin-bottom: -7px;
+            /*Fix for safari gap*/
+            min-height: 175px;
+            max-height: 250px;
+        }
+
+        /* Animation */
+
+        .parallax>use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+
+        .parallax>use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+
+        .parallax>use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+        /*Shrinking for mobile*/
+        @media (max-width: 768px) {
+            .waves {
+                height: 100px;
+                min-height: 125px;
+            }
+        }
+
+        .box p {
+            font-size: 4vh;
+            margin: 0;
+            color: #333333;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            cursor: default;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        html {
+            background-color: #e28b92;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+
+        ::-moz-selection {
+            /* Code for Firefox */
+            color: #ffa0a8;
+            background: #ffffffce;
+        }
+
+        ::selection {
+            color: #ffa0a8;
+            background: #ffffffce;
+        }
+
+        .box {
+            margin-top: 10vh;
+            box-shadow: 20px 20px 60px #c0767c,
+                -20px -20px 60px #ffa0a8;
+
+            border-radius: 2.5vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("./bg.webp");
+            padding: 2.5vh;
+            padding-bottom: 15vh;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+
+        .flex p {
+            cursor: default;
+            bottom: 3.5vh;
+            letter-spacing: 1.5px;
+            color: white;
+            position: absolute;
+        }
+
+        .flex a {
+            bottom: 1vh;
+            letter-spacing: 1.5px;
+            color: white;
+            position: absolute;
+            transition: 0.3s;
+            cursor: default;
+        }
+
+        .flex a:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+
+        .flex {
+            /*Flexbox for containers*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .second {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .box .main button {
+            letter-spacing: 1.5px;
+            width: 20vmax;
+            height: 7.5vh;
+            outline: 0;
+            border: 0;
+            border-radius: 2vh;
+            background-color: #ffa0a8;
+            color: #333333;
+            font-size: 3.5vh;
+            margin: 10px;
+            transition: 0.2s;
+            cursor: default;
+            font-weight: bold;
+        }
+
+        .box .second button {
+            letter-spacing: 1.5px;
+            margin-inline: 1.5vh;
+            margin-block: 0.5vh;
+            width: 15vh;
+            height: 7.5vh;
+            outline: 0;
+            border: 0;
+            border-radius: 2vh;
+            background-color: #333333;
+            color: #ffa0a8;
+            font-size: 2.5vh;
+            transition: 0.2s;
+            cursor: default;
+            font-weight: bold;
+        }
+
+        .box .second button:hover {
+            width: 16vh;
+            height: 8vh;
+            letter-spacing: 2.5px;
+            cursor: pointer;
+        }
+
+        .box .second button:focus {
+            width: 16vh;
+            height: 8vh;
+            opacity: 0.5;
+        }
+
+        .box .main button:hover {
+            width: 21vmax;
+            height: 8vh;
+            letter-spacing: 2.5px;
+            cursor: pointer;
+        }
+
+        .box .main button:focus {
+            width: 21vmax;
+            height: 8vh;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p>ช่องทางการสนับสนุน</p>
+            <div class="main">
+                <a href="https://tipme.in.th/mikky-marcus99">
+                    <button>โดเนท</button>
+                </a>
+            </div>
+            <div class="second">
+                <div class="small">
+                    <a href="https://discord.gg/xXzA2tRMaT">
+                        <button>Discord</button>
+                    </a>
+                </div>
+                <div class="small">
+                    <a href="https://www.youtube.com/@Maximum98">
+                        <button>Youtube</button>
+                    </a>
+                </div>
+                <div class="small">
+                    <a href="https://www.tiktok.com/@ezonepice">
+                        <button>Tiktok</button>
+                    </a>
+                </div>
+                <div class="small">
+                    <a href="https://www.facebook.com/maximum.89">
+                        <button>Facebook</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Waves Container-->
+    <div class="footer">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,160,168,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,160,168,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,160,168,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#FFA0A8" />
+            </g>
+        </svg>
+        <div class="flex">
+            <p text-color="white">ติดต่อสร้างเว็บไซต์ได้ที่</p><a
+                href="https://discord.com/users/574431771815444481"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                    <path
+                        d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                </svg></a>
+
+        </div>
+    </div>
+    <!--Waves end-->
+
+</body>
+
+</html>
