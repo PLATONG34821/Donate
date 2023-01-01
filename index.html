@@ -68,6 +68,20 @@
             }
         }
 
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0px);
+            }
+
+            50% {
+                transform: translate(0, 10px);
+            }
+
+            100% {
+                transform: translate(0, -0px);
+            }
+        }
+
         .flex img {
             width: 75vmax;
             position: absolute;
@@ -149,6 +163,10 @@
             align-content: center;
             align-items: center;
             z-index: 1;
+            animation-name: floating;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
         }
 
         .flex p {
