@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 7.5vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    max-height: 250px;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        background-position: 0% 50%;
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        background-position: 0% 57.5%;
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        background-position: 0% 50%;
+        transform: translate(0, -0px);
+    }
+}
+
+.flex img {
+    width: 75vmax;
+    position: absolute;
+    z-index: -1;
+    bottom: 1vh;
+    opacity: 0.7;
+    filter: blur(1px);
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 1080px) {
+    .waves {
+        height: 15px;
+        min-height: 15px;
+    }
+
+    .flex img {
+        width: 90vw;
+        position: absolute;
+        z-index: -1;
+        bottom: 0.25vh;
+    }
+}
+
+.box p {
+    font-size: 3.75vh;
+    margin: 0;
+    color: #333333;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    cursor: default;
+}
+
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    background-color: #e28b92;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5vh;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: #ffa0a8;
+    background: #ffffffce;
+}
+
+::selection {
+    color: #ffa0a8;
+    background: #ffffffce;
+}
+
+.box {
+    margin-top: 10vh;
+    box-shadow: 20px 20px 60px #c0767c,
+        -20px -20px 60px #ffa0a8;
+
+    border-radius: 2.5vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./bg.webp");
+    padding: 2.5vh;
+    padding-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.flex p {
+    font-size: 2vh;
+    cursor: default;
+    bottom: 3.5vh;
+    letter-spacing: 1.5px;
+    color: white;
+    position: absolute;
+}
+
+.flex a {
+    bottom: 1vh;
+    letter-spacing: 1.5px;
+    color: white;
+    position: absolute;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.flex svg {
+    width: 4.25vh;
+    height: 4vh;
+}
+
+.flex a:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+.flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box .main button {
+    letter-spacing: 0.25vh;
+    width: 17.5vmax;
+    height: 7.5vh;
+    outline: 0;
+    border: 0;
+    border-radius: 2vh;
+    background-color: #ffa0a8;
+    color: #333333;
+    font-size: 3.5vh;
+    margin: 10px;
+    transition: 0.2s;
+    cursor: default;
+    font-weight: bold;
+}
+
+.box .second button {
+    letter-spacing: 0.25vh;
+    margin-inline: 1.5vh;
+    margin-block: 0.5vh;
+    width: 12.5vh;
+    height: 7.5vh;
+    outline: 0;
+    border: 0;
+    border-radius: 2vh;
+    background-color: #333333;
+    color: #ffa0a8;
+    font-size: 2.25vh;
+    transition: 0.2s;
+    cursor: default;
+    font-weight: bold;
+}
+
+.box .second button:hover {
+    letter-spacing: 0.5vh;
+    width: 15vh;
+    height: 8vh;
+    cursor: pointer;
+}
+
+.box .second button:focus {
+    opacity: 0.5;
+}
+
+.box .main button:hover {
+    width: 21vmax;
+    height: 8vh;
+    letter-spacing: 1vh;
+    cursor: pointer;
+}
+
+.box .main button:focus {
+    opacity: 0.5;
+}
